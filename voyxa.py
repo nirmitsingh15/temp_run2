@@ -20,7 +20,7 @@ load_dotenv()
 app = Flask(__name__)
 
 # Load API keys and tokens
-# OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
+OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 # TWILIO_ACCOUNT_SID = os.getenv('TWILIO_ACCOUNT_SID')
 # TWILIO_AUTH_TOKEN = os.getenv('TWILIO_AUTH_TOKEN')
 # ELEVEN_LABS_API_KEY = os.getenv('ELEVEN_LABS_API_KEY')
