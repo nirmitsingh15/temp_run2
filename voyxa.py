@@ -3,6 +3,8 @@ from flask import Flask, request, send_file
 from twilio.twiml.voice_response import VoiceResponse, Gather
 from twilio.rest import Client
 from openai import OpenAI
+from dotenv import load_dotenv
+
 import logging
 import requests
 import tempfile
@@ -12,7 +14,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 # Load environment variables
-# load_dotenv()
+load_dotenv()
 
 # Initialize Flask app
 app = Flask(__name__)
