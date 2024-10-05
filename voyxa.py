@@ -3,7 +3,6 @@ from flask import Flask, request, send_file
 from twilio.twiml.voice_response import VoiceResponse, Gather
 from twilio.rest import Client
 from openai import OpenAI
-from dotenv import load_dotenv
 import logging
 import requests
 import tempfile
@@ -19,10 +18,16 @@ load_dotenv()
 app = Flask(__name__)
 
 # Load API keys and tokens
-OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
-TWILIO_ACCOUNT_SID = os.getenv('TWILIO_ACCOUNT_SID')
-TWILIO_AUTH_TOKEN = os.getenv('TWILIO_AUTH_TOKEN')
-ELEVEN_LABS_API_KEY = os.getenv('ELEVEN_LABS_API_KEY')
+# OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
+# TWILIO_ACCOUNT_SID = os.getenv('TWILIO_ACCOUNT_SID')
+# TWILIO_AUTH_TOKEN = os.getenv('TWILIO_AUTH_TOKEN')
+# ELEVEN_LABS_API_KEY = os.getenv('ELEVEN_LABS_API_KEY')
+DEEPGRAM_API_KEY="282f561f600e5644aeeecef522be4495ebec885d"
+OPENAI_API_KEY="sk-snmeZagl_EtqP6cTFeSehDLkcbutrdR0fRIxpZlxBTT3BlbkFJS3LGCRjndDt_RIBwUJ_GunUWxkz1r-1mW_4z_M05kA"
+ELEVEN_LABS_API_KEY="sk_aec128359cc98eca34d346d76bf33f1fe0277aaefdf022e8"
+TWILIO_ACCOUNT_SID="ACbf5dec6dbcc11c81771660a8c91b317a"
+TWILIO_AUTH_TOKEN="79f3419acbf0ee454cb0b6b439492817"
+TWILIO_PHONE_NUMBER="+1 219 359 4055"
 
 # Initialize clients
 openai_client = OpenAI(api_key=OPENAI_API_KEY)
